@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import com.shubham.hamlet.Login.LoginActivity;
 import com.shubham.hamlet.MainActivity;
 import com.shubham.hamlet.R;
 import com.shubham.hamlet.databinding.ActivitySplashBinding;
@@ -26,6 +27,7 @@ public class SplashActivity extends AppCompatActivity {
         binding.bg.animate().translationY(-5000).setDuration(1000).setStartDelay(4500);
         binding.parrot.animate().translationY(5000).setDuration(1000).setStartDelay(4500);
         binding.name.animate().translationY(5000).setDuration(1000).setStartDelay(4500);
+
         Animation animation = AnimationUtils.loadAnimation(SplashActivity.this, R.anim.splashtextanimation2);
         binding.name.startAnimation(animation);
 //        binding.lottie.startAnimation(animation);
@@ -40,7 +42,7 @@ public class SplashActivity extends AppCompatActivity {
             }
 
             public void onFinish() {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 finish();
             }
         }.start();
