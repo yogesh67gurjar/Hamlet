@@ -17,8 +17,9 @@
             android:exported="false" />
         <activity
             android:name=".Login.LoginActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:exported="true" >
+            android:exported="true"
+            android:theme="@style/FullScreenTheme"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

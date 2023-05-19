@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -21,13 +22,16 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        //hide status bar in activity
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        // Hide the status bar
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT) {
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        }
 //        binding.bg.animate().translationY(-5000).setDuration(1000).setStartDelay(4500);
 //        binding.parrot.animate().translationY(5000).setDuration(1000).setStartDelay(4500);
 //        binding.name.animate().translationY(5000).setDuration(1000).setStartDelay(4500);
         Animation animation = AnimationUtils.loadAnimation(LoginActivity.this, R.anim.splashtextanimation2);
-        binding.card1.startAnimation(animation);
+//        binding.card1.startAnimation(animation);
         binding.parrot.startAnimation(animation);
         binding.number.startAnimation(animation);
         binding.btnLogin.startAnimation(animation);

@@ -41,4 +41,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     //Lottie Animation
     implementation 'com.airbnb.android:lottie:6.0.0'
+    //circular imageview
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
 }
