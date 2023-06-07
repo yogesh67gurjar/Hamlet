@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Hamlet" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
@@ -17,6 +17,18 @@
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:fitsSystemWindows">true</item>
     </style>
+
+
+    <style name="Status" parent="Theme.Material3.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        //status bar ke icon ka color change karne ke liye
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
 
     <style name="Theme.Hamlet" parent="Base.Theme.Hamlet" />
 </resources>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "469770384924",
+    "project_id": "hamlet-f0b63",
+    "storage_bucket": "hamlet-f0b63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469770384924:android:f0cce4df44fb9a9e6a51d9",
+        "android_client_info": {
+          "package_name": "com.shubham.hamlet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469770384924-dvat66cm1eura2dmjark1g2peiv77tvk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shubham.hamlet",
+            "certificate_hash": "05669129df727d80b5fd2544118330f50692cff3"
+          }
+        },
+        {
+          "client_id": "469770384924-55fbikvnmmsrm08fl7bjnrlo63bv3b9i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEgX8JeH3nuT0U0RZ7GrMr7LNqN9KNIF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469770384924-55fbikvnmmsrm08fl7bjnrlo63bv3b9i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

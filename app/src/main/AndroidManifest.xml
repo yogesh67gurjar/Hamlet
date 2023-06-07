@@ -8,6 +8,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name=".Firebase.App"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hamlet"
@@ -18,7 +19,7 @@
         <activity
             android:name=".Login.LoginActivity"
             android:exported="true"
-            android:theme="@style/FullScreenTheme"
+            android:theme="@style/Status"
             android:windowSoftInputMode="adjustPan">
 
         </activity>
@@ -38,6 +39,14 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <service android:name=".Firebase.FCMMessageReceiverService"
+            android:exported="false"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
