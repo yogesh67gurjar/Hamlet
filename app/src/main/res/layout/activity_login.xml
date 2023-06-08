@@ -45,36 +45,48 @@
                 android:text="Hamlet"
                 android:textAlignment="center"
                 android:textSize="40sp" />
-
-            <EditText
-                android:id="@+id/txtEmail"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldEmail"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@drawable/bg_edittext"
-                android:fontFamily="@font/amarante"
-                android:inputType="textEmailAddress"
+                android:layout_height="wrap_content"
                 android:hint="Email"
-                android:drawableStart="@drawable/ic_mail"
-                android:paddingStart="5dp"
-                android:drawablePadding="5dp"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textStyle="normal" />
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/black">
 
-            <EditText
-                android:id="@+id/txtPassword"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_mail"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/amarante"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldPassword"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/bg_edittext"
-                android:fontFamily="@font/amarante"
+                android:layout_height="wrap_content"
                 android:hint="Password"
-                android:drawableStart="@drawable/ic_password"
-                android:paddingStart="5dp"
-                android:drawablePadding="5dp"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textStyle="normal" />
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/amarante"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/txtNewUser"

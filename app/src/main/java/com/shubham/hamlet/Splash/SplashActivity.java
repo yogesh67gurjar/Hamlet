@@ -3,6 +3,7 @@ package com.shubham.hamlet.Splash;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -17,12 +18,19 @@ import com.shubham.hamlet.databinding.ActivitySplashBinding;
 public class SplashActivity extends AppCompatActivity {
     ActivitySplashBinding binding;
     long l = 500;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivitySplashBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        sharedPreferences = getApplicationContext().getSharedPreferences("hamlet", MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
 
         binding.bg.animate().translationY(-5000).setDuration(1000).setStartDelay(4500);
         binding.parrot.animate().translationY(5000).setDuration(1000).setStartDelay(4500);
@@ -42,8 +50,14 @@ public class SplashActivity extends AppCompatActivity {
             }
 
             public void onFinish() {
-                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                if (!sharedPreferences.getAll().containsKey("Email")) {
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                } else {
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                }
                 finish();
+
+
             }
         }.start();
 
