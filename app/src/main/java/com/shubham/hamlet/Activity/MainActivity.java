@@ -69,7 +69,16 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         binding.drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        binding.drawernavigationView.setNavigationItemSelectedListener(item -> {
 
+            if (item.getItemId() == R.id.instagram) {
+                Toast.makeText(this, "Instagram", Toast.LENGTH_SHORT).show();
+//                getSupportFragmentManager().beginTransaction().replace(R.id.container, new MainFragment()).commit();
+//                    binding.textView.setText("Home");
+            }
+
+            return true;
+        });
     }
 
     private void setOnClickListener() {
