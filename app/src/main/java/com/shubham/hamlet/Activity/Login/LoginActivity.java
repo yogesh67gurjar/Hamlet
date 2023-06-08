@@ -1,15 +1,12 @@
-package com.shubham.hamlet.Login;
+package com.shubham.hamlet.Activity.Login;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -19,9 +16,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.shubham.hamlet.MainActivity;
+import com.shubham.hamlet.Activity.MainActivity;
 import com.shubham.hamlet.R;
-import com.shubham.hamlet.Splash.SplashActivity;
 import com.shubham.hamlet.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.shubham.hamlet.Splash;
+package com.shubham.hamlet.Activity.Splash;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,12 +6,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
-import com.shubham.hamlet.Login.LoginActivity;
-import com.shubham.hamlet.MainActivity;
+import com.shubham.hamlet.Activity.Login.LoginActivity;
+import com.shubham.hamlet.Activity.MainActivity;
 import com.shubham.hamlet.R;
 import com.shubham.hamlet.databinding.ActivitySplashBinding;
 

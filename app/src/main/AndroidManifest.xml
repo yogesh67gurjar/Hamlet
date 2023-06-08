@@ -16,17 +16,21 @@
         android:theme="@style/Theme.Hamlet"
         tools:targetApi="31">
         <activity
-            android:name=".Login.SignUpActivity"
+            android:name=".Activity.Profile.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".Login.LoginActivity"
+            android:name=".Fragment.Home.HomeFragment"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Login.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Login.LoginActivity"
             android:exported="true"
             android:theme="@style/Status"
-            android:windowSoftInputMode="adjustPan">
-
-        </activity>
+            android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".Splash.SplashActivity"
+            android:name=".Activity.Splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,19 +39,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.MainActivity"
             android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
         <service
             android:name=".Firebase.FCMMessageReceiverService"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
-
             </intent-filter>
         </service>
     </application>

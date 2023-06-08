@@ -7,7 +7,7 @@
     android:background="@color/white"
     android:clipToPadding="false"
     android:fitsSystemWindows="true"
-    tools:context=".Login.SignUpActivity">
+    tools:context=".Activity.Login.SignUpActivity">
 
     <!--    <VideoView-->
     <!--        android:id="@+id/bg"-->
