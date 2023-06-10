@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,7 +28,9 @@ public class SocialAdapter extends RecyclerView.Adapter<SocialAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull SocialAdapter.MyViewHolder holder, int position) {
+        holder.txtComment.setOnClickListener(v -> {
 
+        });
     }
 
     @Override
@@ -36,8 +39,11 @@ public class SocialAdapter extends RecyclerView.Adapter<SocialAdapter.MyViewHold
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
+        ImageView txtComment;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+            txtComment = itemView.findViewById(R.id.txtComment);
         }
     }
 }
