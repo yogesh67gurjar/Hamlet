@@ -18,13 +18,12 @@ public class HomeFragment extends Fragment {
 
     HomeFragmentTabLayoutAdapter adapter;
     FragmentHomeBinding binding;
-    private String[] titles={"Camera","Main","Message"};
+    private String[] titles={"Camera","Social","Message"};
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
-
 
         // fragment setup
         adapter = new HomeFragmentTabLayoutAdapter(getActivity());

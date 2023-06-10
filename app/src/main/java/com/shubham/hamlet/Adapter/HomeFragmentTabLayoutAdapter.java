@@ -6,11 +6,11 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.shubham.hamlet.Fragment.Home.Tablayout.CameraTab;
-import com.shubham.hamlet.Fragment.Home.Tablayout.Maintab;
+import com.shubham.hamlet.Fragment.Home.Tablayout.SocialTab;
 import com.shubham.hamlet.Fragment.Home.Tablayout.MessageTab;
 
 public class HomeFragmentTabLayoutAdapter extends FragmentStateAdapter {
-    private String[] titles={"Camera","Main","Message"};
+    private String[] titles={"Camera","Social","Message"};
     public HomeFragmentTabLayoutAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }
@@ -23,11 +23,11 @@ public class HomeFragmentTabLayoutAdapter extends FragmentStateAdapter {
             case 0:
                 return new CameraTab();
             case 1:
-                return new Maintab();
+                return new SocialTab();
             case 2:
                 return new MessageTab();
         }
-        return new Maintab();
+        return new SocialTab();
     }
 
     @Override

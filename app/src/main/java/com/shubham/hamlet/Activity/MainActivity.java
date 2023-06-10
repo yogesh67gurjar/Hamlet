@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         //byDefault open fragment
+        binding.txtHeading.setText("Hamlet");
         getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
         //clickListener
         setOnClickListener();
@@ -40,12 +41,17 @@ public class MainActivity extends AppCompatActivity {
         binding.navigation.setOnItemSelectedListener(item -> {
 
             if (item.getItemId() == R.id.home) {
+                binding.txtHeading.setText("Hamlet");
+
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
             } else if (item.getItemId() == R.id.search) {
+                binding.txtHeading.setText("Search");
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new SearchFragment()).commit();
             } else if (item.getItemId() == R.id.notification) {
+                binding.txtHeading.setText("Notification");
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new NotificationFragment()).commit();
             } else if (item.getItemId() == R.id.setting) {
+                binding.txtHeading.setText("Setting");
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new SettingFragment()).commit();
             }
             return true;
@@ -75,6 +81,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Instagram", Toast.LENGTH_SHORT).show();
 //                getSupportFragmentManager().beginTransaction().replace(R.id.container, new MainFragment()).commit();
 //                    binding.textView.setText("Home");
+            } else if (item.getItemId() == R.id.logout) {
+
+
+
             }
 
             return true;

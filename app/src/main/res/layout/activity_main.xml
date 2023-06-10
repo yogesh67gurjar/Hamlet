@@ -25,13 +25,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:background="@color/white"
-                android:backgroundTint="@color/blueviolet"
+                android:backgroundTint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:navigationIcon="@drawable/ic_menu"
                 app:subtitleTextColor="#FFFFFF"
                 app:titleTextColor="#FFFEFE" />
+
+            <TextView
+                android:id="@+id/txtHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amarante"
+                android:text="Hamlet"
+                android:textColor="@color/black"
+                android:textSize="27sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@id/toolbar"
+                app:layout_constraintEnd_toEndOf="@id/toolbar"
+                app:layout_constraintStart_toStartOf="@id/toolbar"
+                app:layout_constraintTop_toTopOf="@id/toolbar" />
 
             <FrameLayout
                 android:id="@+id/container"

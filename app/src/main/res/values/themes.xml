@@ -24,9 +24,17 @@
         //status bar ke icon ka color change karne ke liye
         <item name="android:windowLightStatusBar">true</item>
         <item name="windowNoTitle">true</item>
+        <item name="fontFamily">@font/amarante</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:fitsSystemWindows">true</item>
+    </style>
+    <style name="MainActivity" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/white</item>
+        //status bar ke icon ka color change karne ke liye
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="fontFamily">@font/amarante</item>
+
     </style>
 
 
