@@ -7,12 +7,17 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.shubham.hamlet.BottomSheetFragment.CommentFragment;
 import com.shubham.hamlet.R;
 
 public class SocialAdapter extends RecyclerView.Adapter<SocialAdapter.MyViewHolder> {
     Context context;
+
 
     public SocialAdapter(Context context) {
         this.context = context;
@@ -29,7 +34,12 @@ public class SocialAdapter extends RecyclerView.Adapter<SocialAdapter.MyViewHold
     @Override
     public void onBindViewHolder(@NonNull SocialAdapter.MyViewHolder holder, int position) {
         holder.txtComment.setOnClickListener(v -> {
+            CommentFragment commentFragment = new CommentFragment();
 
+            FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
+            FragmentTransaction ft =manager.beginTransaction();
+//            commentFragment.setCancelable(false);
+            commentFragment.show(ft, commentFragment.getTag());
         });
     }
 
