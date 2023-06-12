@@ -58,6 +58,7 @@
         </LinearLayout>
 
         <ImageButton
+            android:id="@+id/btnCommentLike"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center_vertical"
